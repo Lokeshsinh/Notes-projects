@@ -26,7 +26,7 @@ function Notes() {
   const [editPopup, setEditPopup] = useState(false);
   const [editId, setEditId] = useState("");
   const [totalNotes, setTotalNotes] = useState(0);
-  const [messagePinned, setMessagePinned] = useState(null);
+  const [messagePinned, setMessagePinned] = useState([]);
 
   const API = "http://localhost:3001/api";
 
@@ -158,12 +158,16 @@ function Notes() {
 
     await axios.put(`${API}/pin/${id}`);
 
-    // ONLY CLICKED CARD MESSAGE
-    if (messagePinned === id) {
-      setMessagePinned(null);
-    } else {
-      setMessagePinned(id);
-    }
+    setMessagePinned((prev) => {
+
+
+      if (prev.includes(id)) {
+        return prev.filter((item) => item !== id);
+      }
+
+
+      return [...prev, id];
+    });
 
     getNotes();
   };
@@ -328,7 +332,7 @@ function Notes() {
                 <div className={styles.pinnedFlex}>
 
                   <span
-                    className={`${styles.pinText} ${messagePinned === note._id
+                    className={`${styles.pinText} ${messagePinned.includes(note._id)
                       ? styles.showPinText
                       : ""
                       }`}
@@ -338,8 +342,8 @@ function Notes() {
 
                   <BsPinAngleFill
                     className={`${styles.pin} ${note.pinned
-                      ? styles.activePin
-                      : ""
+                        ? styles.activePin
+                        : ""
                       }`}
                     onClick={() => pinNote(note._id)}
                   />
