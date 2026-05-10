@@ -1,0 +1,940 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 70px;
+  border-bottom: 1px solid #ddd2c5;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logoIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #5B2C1F;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.logo h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+
+/* Search */
+
+.searchBox {
+  width: 530px;
+  height: 40px;
+  background: #F7F2EB;
+  border: 1px solid #d9cec1;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+}
+
+.searchIcon {
+  color: #7d6d65;
+  font-size: 18px;
+}
+
+.searchBox input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+
+/* Button */
+
+.newBtn {
+  background: #5B2C1F;
+  color: white;
+  border: none;
+  height: 40px;
+  padding: 0 24px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+/* Hero */
+
+.hero {
+  padding: 60px 70px 30px;
+}
+
+.hero h1 {
+  font-size: 86px;
+  line-height: 1;
+  max-width: 950px;
+  font-weight: 700;
+}
+
+.hero span {
+  color: #8B7A73;
+  font-style: italic;
+  margin-left: 14px;
+}
+
+.hero p {
+  margin-top: 28px;
+  font-size: 22px;
+  color: #5d504a;
+  line-height: 1.6;
+  max-width: 720px;
+}
+
+
+/* Empty Box */
+
+.emptyBox {
+  margin: 40px 70px;
+  min-height: 360px;
+  border: 2px solid #e0d6ca;
+  border-radius: 28px;
+  background: #F7F2EB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.emptyIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #F3D7C1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 28px;
+}
+
+.emptyBox h2 {
+  font-size: 54px;
+  margin-bottom: 12px;
+}
+
+.emptyBox p {
+  font-size: 24px;
+  color: #6e6058;
+  margin-bottom: 28px;
+}
+
+.createBtn {
+  background: #5B2C1F;
+  color: white;
+  border: none;
+  padding: 16px 28px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+/* count */
+
+
+/* Add These Styles */
+
+.notesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 30px 70px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  animation: fadeUp .5s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+  transition: .3s;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 14px;
+}
+
+.pinnedFlex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 90px;
+  justify-content: flex-end;
+}
+
+/* PIN TEXT */
+.pinText {
+  font-size: 11px;
+  color: #5B2C1F;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all .3s ease;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.showPinText {
+  opacity: 1;
+  width: 45px;
+  transform: translateX(0);
+}
+
+/* PIN ICON */
+.pin {
+  cursor: pointer;
+  color: #5B2C1F;
+  font-size: 20px;
+  transition: transform .3s ease, color .3s ease;
+}
+
+.pin:hover {
+  transform: rotate(15deg) scale(1.15);
+}
+
+.activePin {
+  color: #A04000;
+  transform: scale(1.2);
+}
+
+
+.card h3 {
+  font-size: 24px;
+}
+
+.card p {
+  margin: 15px 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+.buttonFlex {
+  display: flex;
+  gap: 15px;
+  margin-top: 18px;
+}
+
+.deleteBtn {
+  background: #5B2C1F;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all .3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.deleteBtn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(91, 44, 31, .25);
+}
+
+.deleteBtn:active {
+  transform: scale(.96);
+}
+
+/* Button shine animation */
+.deleteBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .2);
+  transition: .5s;
+}
+
+.deleteBtn:hover::before {
+  left: 100%;
+}
+
+/* MODAL */
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fade .3s ease;
+}
+
+.modal {
+  width: 420px;
+  background: white;
+  padding: 30px;
+  border-radius: 25px;
+  animation: popup .4s ease;
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+}
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.modal textarea {
+  height: 140px;
+  resize: none;
+}
+
+.modal button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 14px;
+  background: #5B2C1F;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.closeBtn {
+  background: #ddd !important;
+  color: black !important;
+}
+
+
+
+
+/* LOADER */
+
+.loader {
+  width: 22px;
+  height: 22px;
+  border: 3px solid white;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  margin: auto;
+  animation: spin 1s linear infinite;
+}
+
+
+/* ANIMATION */
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes popup {
+  from {
+    transform: scale(.7);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.deleteModal {
+  width: 350px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  animation: popup .3s ease;
+}
+
+.deleteModal h2 {
+  margin-bottom: 10px;
+}
+
+.deleteModal p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.deleteActions {
+  display: flex;
+  gap: 15px;
+}
+
+.yesBtn {
+  flex: 1;
+  background: #5B2C1F;
+  color: white;
+  border: none;
+  height: 45px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.noBtn {
+  flex: 1;
+  background: #ddd;
+  border: none;
+  height: 45px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+
+
+/* Responsive */
+
+/* =========================================================
+   EXTRA RESPONSIVE MEDIA QUERIES
+   ADD THIS AT THE BOTTOM OF YOUR CSS FILE
+========================================================= */
+
+
+/* =========================
+   1600px
+========================= */
+@media (max-width:1600px) {
+
+  .hero h1 {
+    font-size: 76px;
+  }
+
+  .searchBox {
+    width: 420px;
+  }
+
+  .notesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+
+/* =========================
+   1440px
+========================= */
+@media (max-width:1440px) {
+
+  .navbar {
+    padding: 20px 50px;
+  }
+
+  .hero {
+    padding: 50px;
+  }
+
+  .hero h1 {
+    font-size: 70px;
+    max-width: 850px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+
+  .searchBox {
+    width: 380px;
+  }
+
+  .emptyBox {
+    margin: 40px 50px;
+  }
+
+  .notesGrid {
+    padding: 30px 50px;
+  }
+}
+
+
+/* =========================
+   1280px
+========================= */
+@media (max-width:1280px) {
+
+  .logo h2 {
+    font-size: 40px;
+  }
+
+  .hero h1 {
+    font-size: 62px;
+  }
+
+  .searchBox {
+    width: 320px;
+  }
+
+  .notesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+
+/* =========================
+   1100px
+========================= */
+@media (max-width:1100px) {
+
+  .navbar {
+    padding: 20px 35px;
+  }
+
+  .hero {
+    padding: 40px 35px;
+  }
+
+  .hero h1 {
+    font-size: 56px;
+  }
+
+  .hero p {
+    font-size: 19px;
+  }
+
+  .notesGrid {
+    padding: 20px 35px;
+  }
+
+  .emptyBox {
+    margin: 30px 35px;
+  }
+}
+
+
+/* =========================
+   1000px
+========================= */
+@media (max-width:1000px) {
+
+  .searchBox {
+    width: 280px;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .card h3 {
+    font-size: 22px;
+  }
+
+  .buttonFlex {
+    flex-direction: column;
+  }
+
+  .deleteBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+/* =========================
+   900px
+========================= */
+@media(max-width:900px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .navRight {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .searchBox {
+    width: 100%;
+  }
+
+  .newBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .emptyBox {
+    margin: 20px;
+    padding: 30px;
+  }
+
+  .emptyBox h2 {
+    font-size: 36px;
+  }
+
+  .notesGrid {
+    padding: 20px;
+  }
+}
+
+
+/* =========================
+   768px
+========================= */
+@media (max-width:768px) {
+
+  .logo h2 {
+    font-size: 34px;
+  }
+
+  .logoIcon {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+    line-height: 1.1;
+  }
+
+  .hero span {
+    margin-left: 0;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .notesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal {
+    width: 92%;
+    padding: 25px;
+  }
+
+  .deleteModal {
+    width: 92%;
+  }
+}
+
+
+/* =========================
+   600px
+========================= */
+@media (max-width:600px) {
+
+  .navbar {
+    padding: 16px;
+  }
+
+  .hero {
+    padding: 30px 16px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .emptyBox h2 {
+    font-size: 30px;
+  }
+
+  .emptyBox p {
+    font-size: 18px;
+  }
+
+  .createBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .buttonFlex {
+    gap: 10px;
+  }
+}
+
+
+/* =========================
+   480px
+========================= */
+@media (max-width:480px) {
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .logo {
+    gap: 10px;
+  }
+
+  .logo h2 {
+    font-size: 28px;
+  }
+
+  .logoIcon {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .searchBox {
+    height: 44px;
+    padding: 0 14px;
+  }
+
+  .searchBox input {
+    font-size: 14px;
+  }
+
+  .newBtn {
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .cardTop {
+    gap: 10px;
+  }
+
+  .pinnedFlex {
+    min-width: auto;
+  }
+
+  .modal {
+    padding: 20px;
+  }
+}
+
+
+/* =========================
+   380px
+========================= */
+@media (max-width:380px) {
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .emptyBox {
+    padding: 20px;
+  }
+
+  .emptyBox h2 {
+    font-size: 24px;
+  }
+
+  .emptyBox p {
+    font-size: 15px;
+  }
+
+  .createBtn {
+    font-size: 14px;
+    padding: 14px 18px;
+  }
+
+  .card {
+    border-radius: 16px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .deleteBtn {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+}
+
+
+/* =========================
+   320px
+========================= */
+@media (max-width:320px) {
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .logo h2 {
+    font-size: 22px;
+  }
+
+  .searchBox {
+    height: 40px;
+  }
+
+  .newBtn {
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .modal {
+    width: 96%;
+    padding: 16px;
+  }
+
+  .modal input,
+  .modal textarea {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .modal button {
+    height: 42px;
+    font-size: 13px;
+  }
+}
+
+
+/* =========================
+   MAX HEIGHT 100px
+========================= */
+@media (max-height:100px) {
+
+  .hero,
+  .emptyBox,
+  .notesGrid,
+  .navbar {
+    display: none;
+  }
+
+  body {
+    overflow: auto;
+  }
+}
+
+
+
+/* =========================
+   LARGE SCREEN %
+========================= */
+@media (min-width:1800px) {
+
+  .navbar,
+  .hero,
+  .notesGrid {
+    width: 90%;
+    margin: auto;
+  }
+
+  .hero h1 {
+    font-size: 6vw;
+  }
+
+  .hero p {
+    font-size: 1.2vw;
+  }
+
+  .logo h2 {
+    font-size: 2.5vw;
+  }
+
+  .searchBox {
+    width: 28%;
+  }
+}

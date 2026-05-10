@@ -1,0 +1,17 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* REMOVE z-index: -1 from here */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+}

@@ -1,0 +1,103 @@
+.websiteLoader {
+  position: fixed;
+  inset: 0;
+  background: #F7F2EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  overflow: hidden;
+}
+
+.loaderContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loaderLogo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #5B2C1F;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 52px;
+
+  animation:
+    zoomLogo 1.5s ease infinite,
+    rotateLogo 5s linear infinite;
+}
+
+.loaderText {
+  margin-top: 22px;
+  font-size: 52px;
+  color: #5B2C1F;
+  letter-spacing: 2px;
+
+  animation: fadeText 1.5s ease infinite;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes zoomLogo {
+
+  0% {
+    transform: scale(.5);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateLogo {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeText {
+
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: .8;
+  }
+}
+
+
+/* MOBILE */
+
+@media (max-width:600px) {
+
+  .loaderLogo {
+    width: 85px;
+    height: 85px;
+    font-size: 38px;
+  }
+
+  .loaderText {
+    font-size: 34px;
+  }
+}
+
